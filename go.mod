@@ -1,4 +1,4 @@
-module github.com/redhat-cop/podpreset-webhook
+module github.com/WizardTales/podpreset-webhook-ng
 
 go 1.15
 

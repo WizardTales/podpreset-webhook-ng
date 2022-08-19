@@ -1,7 +1,7 @@
 domain: redhat.io
 layout: go.kubebuilder.io/v3
 projectName: podpreset-webhook
-repo: github.com/redhat-cop/podpreset-webhook
+repo: github.com/WizardTales/podpreset-webhook-ng
 resources:
 - api:
     crdVersion: v1
@@ -9,7 +9,7 @@ resources:
   domain: redhat.io
   group: redhatcop
   kind: PodPreset
-  path: github.com/redhat-cop/podpreset-webhook/api/v1alpha1
+  path: github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1
   version: v1alpha1
   webhooks:
     webhookVersion: v1

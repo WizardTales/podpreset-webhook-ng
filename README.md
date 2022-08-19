@@ -1,6 +1,6 @@
 # podpreset-webhook
 
-[![Build Status](https://github.com/redhat-cop/podpreset-webhook/workflows/push/badge.svg?branch=master)](https://github.com/redhat-cop/podpreset-webhook/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/redhat-cop/podpreset-webhook/status "Docker Repository on Quay")](https://quay.io/repository/redhat-cop/podpreset-webhook)
+[![Build Status](https://github.com/WizardTales/podpreset-webhook-ng/workflows/push/badge.svg?branch=master)](https://github.com/redhat-cop/podpreset-webhook/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/redhat-cop/podpreset-webhook/status "Docker Repository on Quay")](https://quay.io/repository/redhat-cop/podpreset-webhook)
 
 Implementation of the now deprecated Kubernetes _PodPreset_ feature as an [Admission Webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/).
 

@@ -32,8 +32,8 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	redhatcopv1alpha1 "github.com/redhat-cop/podpreset-webhook/api/v1alpha1"
-	"github.com/redhat-cop/podpreset-webhook/pkg/handler"
+	redhatcopv1alpha1 "github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1"
+	"github.com/WizardTales/podpreset-webhook-ng/pkg/handler"
 	// +kubebuilder:scaffold:imports
 )
 
