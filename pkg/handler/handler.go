@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/go-logr/logr"
 	wzrdtalesscpv1alpha1 "github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1"
+	"github.com/go-logr/logr"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
 	corev1 "k8s.io/api/core/v1"

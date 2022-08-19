@@ -1,6 +1,6 @@
 # podpreset-webhook
 
-[![Build Status](https://github.com/WizardTales/podpreset-webhook-ng/workflows/push/badge.svg?branch=master)](https://github.com/WizardTales/podpreset-webhook/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/WizardTales/podpreset-webhook/status "Docker Repository on Quay")](https://quay.io/repository/WizardTales/podpreset-webhook)
+[![Build Status](https://github.com/WizardTales/podpreset-webhook-ng/workflows/push/badge.svg?branch=master)](https://github.com/WizardTales/podpreset-webhook-ng/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/WizardTales/podpreset-webhook-ng/status "Docker Repository on Quay")](https://quay.io/repository/WizardTales/podpreset-webhook-ng)
 
 Implementation of the now deprecated Kubernetes _PodPreset_ feature as an [Admission Webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/).
 
@@ -43,6 +43,7 @@ Execute the following command which will facilitate a deployment to a namespace 
 ```shell
 make deploy IMG=quay.io/WizardTales/podpreset-webhook:latest
 ```
+
 ## Example Implementation
 
 Utilize the following steps to demonstrate the functionality of the _PodPreset's_ in a cluster.
@@ -88,10 +89,12 @@ oc new-project podpreset-webhook
 operator-sdk cleanup podpreset-webhook -n podpreset-webhook
 operator-sdk run bundle -n podpreset-webhook quay.io/$repo/podpreset-webhook-bundle:latest
 ```
+
 ### Cleaning up
 
 ```shell
 operator-sdk cleanup podpreset-webhook -n podpreset-webhook
 oc delete operatorgroup operator-sdk-og
+```
 oc delete catalogsource podpreset-webhook-catalog
 ```
