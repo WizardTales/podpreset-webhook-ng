@@ -5,7 +5,7 @@ metadata:
   name: podpreset-editor-role
 rules:
 - apiGroups:
-  - redhatcop.redhat.io
+  - wzrdtalesscp.wzrdtales.com
   resources:
   - podpresets
   verbs:
@@ -17,7 +17,7 @@ rules:
   - update
   - watch
 - apiGroups:
-  - redhatcop.redhat.io
+  - wzrdtalesscp.wzrdtales.com
   resources:
   - podpresets/status
   verbs:

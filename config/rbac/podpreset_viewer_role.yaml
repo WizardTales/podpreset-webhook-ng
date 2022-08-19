@@ -5,7 +5,7 @@ metadata:
   name: podpreset-viewer-role
 rules:
 - apiGroups:
-  - redhatcop.redhat.io
+  - wzrdtalesscp.wzrdtales.com
   resources:
   - podpresets
   verbs:
@@ -13,7 +13,7 @@ rules:
   - list
   - watch
 - apiGroups:
-  - redhatcop.redhat.io
+  - wzrdtalesscp.wzrdtales.com
   resources:
   - podpresets/status
   verbs:

@@ -1,17 +1,17 @@
 # podpreset-webhook
 
-[![Build Status](https://github.com/WizardTales/podpreset-webhook-ng/workflows/push/badge.svg?branch=master)](https://github.com/redhat-cop/podpreset-webhook/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/redhat-cop/podpreset-webhook/status "Docker Repository on Quay")](https://quay.io/repository/redhat-cop/podpreset-webhook)
+[![Build Status](https://github.com/WizardTales/podpreset-webhook-ng/workflows/push/badge.svg?branch=master)](https://github.com/WizardTales/podpreset-webhook/actions?workflow=push) [![Docker Repository on Quay](https://quay.io/repository/WizardTales/podpreset-webhook/status "Docker Repository on Quay")](https://quay.io/repository/WizardTales/podpreset-webhook)
 
 Implementation of the now deprecated Kubernetes _PodPreset_ feature as an [Admission Webhook](https://kubernetes.io/docs/reference/access-authn-authz/extensible-admission-controllers/).
 
 ## Overview
 
-Kubernetes features the ability to inject certain information into pods at creation time including secrets, volumes, volume mounts, and environment variables. Admission Webhooks are implemented as a webserver which receive requests from the Kubernetes API. A CustomResourceDefinition (CRD) called _PodPreset_ in the _redhatcop.redhat.io_ API group has an identical specification to the upstream API resource.
+Kubernetes features the ability to inject certain information into pods at creation time including secrets, volumes, volume mounts, and environment variables. Admission Webhooks are implemented as a webserver which receive requests from the Kubernetes API. A CustomResourceDefinition (CRD) called _PodPreset_ in the _wzrdtalesscp.wzrdtales.com_ API group has an identical specification to the upstream API resource.
 
 The following is an example of a _PodPreset_ that injects an environment variable called _FOO_ to pods with the label `role: frontend`
 
 ```
-apiVersion: redhatcop.redhat.io/v1alpha1
+apiVersion: wzrdtalesscp.wzrdtales.com/v1alpha1
 kind: PodPreset
 metadata:
   name: frontend
@@ -41,7 +41,7 @@ The following steps describe the various methods for which the solution can be d
 Execute the following command which will facilitate a deployment to a namespace called `podpreset-webhook`
 
 ```shell
-make deploy IMG=quay.io/redhat-cop/podpreset-webhook:latest
+make deploy IMG=quay.io/WizardTales/podpreset-webhook:latest
 ```
 ## Example Implementation
 
@@ -52,7 +52,7 @@ Utilize the following steps to demonstrate the functionality of the _PodPreset's
 2. Create the _PodPreset_
 
 ```
-kubectl apply -f config/samples/redhatcop_v1alpha1_podpreset.yaml
+kubectl apply -f config/samples/wzrdtalesscp_v1alpha1_podpreset.yaml
 ```
 
 3. Label the resource
@@ -68,7 +68,7 @@ Verify any new pods have the environment variable `FOO=bar`
 ### Building/Pushing the operator image
 
 ```shell
-export repo=redhatcopuser #replace with yours
+export repo=wzrdtalesscpuser #replace with yours
 docker login quay.io/$repo/podpreset-webhook
 make docker-build IMG=quay.io/$repo/podpreset-webhook:latest
 make docker-push IMG=quay.io/$repo/podpreset-webhook:latest

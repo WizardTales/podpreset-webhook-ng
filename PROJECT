@@ -1,4 +1,4 @@
-domain: redhat.io
+domain: wzrdtales.com
 layout: go.kubebuilder.io/v3
 projectName: podpreset-webhook
 repo: github.com/WizardTales/podpreset-webhook-ng
@@ -6,8 +6,8 @@ resources:
 - api:
     crdVersion: v1
     namespaced: true
-  domain: redhat.io
-  group: redhatcop
+  domain: wzrdtales.com
+  group: wzrdtalesscp
   kind: PodPreset
   path: github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1
   version: v1alpha1

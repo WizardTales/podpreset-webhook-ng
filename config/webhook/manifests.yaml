@@ -15,7 +15,7 @@ webhooks:
       namespace: system
       path: /mutate
   failurePolicy: Ignore
-  name: mpod.redhatcop.redhat.io
+  name: mpod.wzrdtalesscp.wzrdtales.com
   rules:
   - apiGroups:
     - ""

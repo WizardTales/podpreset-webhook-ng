@@ -32,7 +32,7 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	"sigs.k8s.io/controller-runtime/pkg/webhook"
 
-	redhatcopv1alpha1 "github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1"
+	wzrdtalesscpv1alpha1 "github.com/WizardTales/podpreset-webhook-ng/api/v1alpha1"
 	"github.com/WizardTales/podpreset-webhook-ng/pkg/handler"
 	// +kubebuilder:scaffold:imports
 )
@@ -53,7 +53,7 @@ const (
 func init() {
 	utilruntime.Must(clientgoscheme.AddToScheme(scheme))
 
-	utilruntime.Must(redhatcopv1alpha1.AddToScheme(scheme))
+	utilruntime.Must(wzrdtalesscpv1alpha1.AddToScheme(scheme))
 	// +kubebuilder:scaffold:scheme
 }
 
@@ -81,7 +81,7 @@ func main() {
 		HealthProbeBindAddress:     probeAddr,
 		LeaderElection:             enableLeaderElection,
 		LeaderElectionResourceLock: "configmaps",
-		LeaderElectionID:           "7256067a.redhat.io",
+		LeaderElectionID:           "7256067a.wzrdtales.com",
 	})
 	if err != nil {
 		setupLog.Error(err, "unable to start manager")

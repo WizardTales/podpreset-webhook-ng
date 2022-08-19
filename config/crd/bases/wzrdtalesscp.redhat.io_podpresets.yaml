@@ -6,9 +6,9 @@ metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.4.1
   creationTimestamp: null
-  name: podpresets.redhatcop.redhat.io
+  name: podpresets.wzrdtalesscp.wzrdtales.com
 spec:
-  group: redhatcop.redhat.io
+  group: wzrdtalesscp.wzrdtales.com
   names:
     kind: PodPreset
     listKind: PodPresetList
