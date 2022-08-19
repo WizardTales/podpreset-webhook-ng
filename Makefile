@@ -89,13 +89,14 @@ define go-get-tool
 @[ -f $(1) ] || { \
 set -e ;\
 TMP_DIR=$$(mktemp -d) ;\
+echo $$TMP_DIR; \
 cd $$TMP_DIR ;\
 go mod init tmp ;\
-echo "Downloading $(2)" ;\
+echo "Downloading $(2) to $${TMP_DIR}" ;\
 GOBIN=$(PROJECT_DIR)/bin go get $(2) ;\
-rm -rf $$TMP_DIR ;\
 }
 endef
+#rm -rf $$TMP_DIR ;\
 
 # Generate bundle manifests and metadata, then validate generated files.
 .PHONY: bundle
