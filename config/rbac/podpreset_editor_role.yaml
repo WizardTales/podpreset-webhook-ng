@@ -4,21 +4,23 @@ kind: ClusterRole
 metadata:
   name: podpreset-editor-role
 rules:
-- apiGroups:
-  - wzrdtalesscp.wzrdtales.com
-  resources:
-  - podpresets
-  verbs:
-  - create
-  - delete
-  - get
-  - list
-  - patch
-  - update
-  - watch
-- apiGroups:
-  - wzrdtalesscp.wzrdtales.com
-  resources:
-  - podpresets/status
-  verbs:
-  - get
+  - apiGroups:
+      - wzrdtalesscp.wzrdtales.com
+    resources:
+      - podpresets
+      - clusterpodpresets
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
+  - apiGroups:
+      - wzrdtalesscp.wzrdtales.com
+    resources:
+      - podpresets/status
+      - clusterpodpresets/status
+    verbs:
+      - get

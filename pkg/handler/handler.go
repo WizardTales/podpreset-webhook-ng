@@ -25,6 +25,7 @@ const (
 
 // +kubebuilder:webhook:path=/mutate,mutating=true,failurePolicy=ignore,groups="",resources=pods,verbs=create,versions=v1,name=mpod.wzrdtalesscp.wzrdtales.com,sideEffects=None,admissionReviewVersions={v1,v1beta1}
 // +kubebuilder:rbac:groups=wzrdtalesscp.wzrdtales.com,resources=podpresets,verbs=get;list;watch;create;update;patch
+// +kubebuilder:rbac:groups=wzrdtalesscp.wzrdtales.com,resources=clusterpodpresets,verbs=get;list;watch;create;update;patch
 // +kubebuilder:rbac:groups="",resources=pods,verbs=get;list;update;patch
 
 // PodPresetMutator mutates Pods

@@ -18,6 +18,17 @@ rules:
 - apiGroups:
   - wzrdtalesscp.wzrdtales.com
   resources:
+  - clusterpodpresets
+  verbs:
+  - create
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - wzrdtalesscp.wzrdtales.com
+  resources:
   - podpresets
   verbs:
   - create

@@ -4,17 +4,19 @@ kind: ClusterRole
 metadata:
   name: podpreset-viewer-role
 rules:
-- apiGroups:
-  - wzrdtalesscp.wzrdtales.com
-  resources:
-  - podpresets
-  verbs:
-  - get
-  - list
-  - watch
-- apiGroups:
-  - wzrdtalesscp.wzrdtales.com
-  resources:
-  - podpresets/status
-  verbs:
-  - get
+  - apiGroups:
+      - wzrdtalesscp.wzrdtales.com
+    resources:
+      - podpresets
+      - clusterpodpresets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - wzrdtalesscp.wzrdtales.com
+    resources:
+      - podpresets/status
+      - clusterpodpresets/status
+    verbs:
+      - get

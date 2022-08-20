@@ -1,11 +1,8 @@
 apiVersion: wzrdtalesscp.wzrdtales.com/v1alpha1
-kind: PodPreset
+kind: ClusterPodPreset
 metadata:
   name: frontend
 spec:
   env:
     - name: FOO
       value: bar
-  selector:
-    matchLabels:
-      role: frontend
